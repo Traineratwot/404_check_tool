@@ -88,8 +88,8 @@ var target = document.querySelector('body');
 // создаем новый экземпляр наблюдателя
 var observer = new MutationObserver(function (mutations) {
 	mutations.forEach(function (mutation) {
-		links();
-		setTimeout(links_report(), 2000)
+
+		setTimeout(() => { links_report(); links(); }, 1000)
 	});
 });
 
